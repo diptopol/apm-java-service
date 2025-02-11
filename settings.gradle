@@ -1,0 +1,5 @@
+rootProject.name = 'apm-java-service'
+
+include "gateway"
+include "service-a"
+include "service-b"

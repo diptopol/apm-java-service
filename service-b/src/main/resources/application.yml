@@ -1,0 +1,16 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: service-b
+
+  cloud:
+    consul:
+      discovery:
+        enabled: true
+        prefer-ip-address: false
+        instance-id: ${spring.application.name}:${random.value}
+        health-check-path: /actuator/health
+        hostname: localhost
+      host: localhost
+      port: 8500
